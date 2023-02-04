@@ -1,7 +1,7 @@
-def quadratic_solve(a:float, b:float, c:float): # ax^2+bx+c=0
-    if c == 0 and a != 0: # ax^2 + bx=0 -> x = 0, -b/a
+def quadratic_solve(a:float, b:float, c:float):           # ax^2+bx+c=0
+    if c == 0 and a != 0:                                 # ax^2 + bx=0 -> x = 0, -b/a
         return sorted([0, truncate(-b/a,5)])
-    elif a == 0:
+    elif a == 0:                                          # bx+c=0 -> x=-c/b
         return [truncate(-c/b,5)]
     else:
         d=b*b - 4*a*c
@@ -28,7 +28,7 @@ def test():
             print(f'Test №{i} прошел успешно')
         i+=1
 
-def truncate(n, decimals = 0):
+def truncate(n, decimals = 0):                              # Функция усечения до заданного знака (по умолчанию до целого)
     multiplier = 10 ** decimals
     return int(n * multiplier) / multiplier
 
