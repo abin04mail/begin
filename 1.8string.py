@@ -1,5 +1,5 @@
 a = input("введите слово ")
-if len(a)>4:
+if len(a)>=4:
     print("четвертая буква : ", a[3])
 else:
     print("НЕТ")
