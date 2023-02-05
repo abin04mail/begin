@@ -1,5 +1,7 @@
 import argparse
-book = {"Masha": 89778881539, "Pasha": 89778081476, "Natasha": 89771231536}
+import json
+
+book = json.load( open( '/home/serg/phone_book' ))
 
 parser = argparse.ArgumentParser(description='Telephon book')
 parser.add_argument('-a', '--add', dest="param1")
@@ -27,7 +29,7 @@ if args.param1:
 elif args.param2:
         name = args.param2
         if name in book:
-            del[book][name]
+            del book[name]
             print("Контакт с именем ", name, " удален")
         else:
             print("Контакта с именем ", name, " в книге нет")
@@ -43,3 +45,4 @@ elif args.param3:
             print("Контакта с именем ", name, " в книге нет")
 else:
      print("Введен неверный аргумент")
+json.dump( book, open( '/home/serg/phone_book', "w"))
