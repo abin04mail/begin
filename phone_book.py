@@ -7,9 +7,9 @@ parser.add_argument('-d', '--delete', dest="param2")
 parser.add_argument('-s', '--show', dest="param3", default="all")
 
 args = parser.parse_args()
-# print(args)
+print(args)
 
-# Формат запуска python3.11 "/home/serg/Рабочий стол/Python71-1/begin/phone_book.py" --add "Katya:89123456713"
+# Формат запуска python3.11 /home/serg/'Рабочий стол'/Python71-1/begin/phone_book.py --add "Katya:89123456713"
 if args.param1:
     name, tele = args.param1.split(":")
     if name in book:
@@ -21,7 +21,7 @@ if args.param1:
         print("Контакт с именем ", name, "добавлен")
         print(name, ":", book[name])
 
-# Формат запуска python3.11 "/home/serg/Рабочий стол/Python71-1/begin/phone_book.py" --delete "Katya"
+# Формат запуска python3.11 /home/serg/'Рабочий стол'/Python71-1/begin/phone_book.py --delete "Katya"
 if args.param2:
     name = args.param2
     if name in book:
@@ -30,10 +30,12 @@ if args.param2:
     else:
         print("Контакта с именем ", name, " в книге нет")
 
-# Формат запуска python3.11 /home/serg/'Рабочий стол'/Python71-1/begin/phone_book.py --show "Katya" или --show
+# Формат запуска python3.11 /home/serg/'Рабочий стол'/Python71-1/begin/phone_book.py --show "Katya" или --show "all"
 if args.param3:
     name = args.param3
+    #if name == all:
+    #    print(name, ":", book[name])
     if name in book:
-        print(name, ":", book[name])
+        print(book[name])
     else:
-        print(book)
+        print("Контакта с именем ", name, " в книге нет")
