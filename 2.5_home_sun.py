@@ -19,7 +19,7 @@ def change_pol():
 def change_ova():
     canvas.itemconfig(ova, fill=col[color(ova)])
 
-canvas = Canvas(root, width=500, height=700, bg='white')
+canvas = Canvas(root, width=500, height=700, bg='cyan')
 canvas.pack()
 rec = canvas.create_rectangle(30,200,470,580,fill='blue')
 ova = canvas.create_oval(400,10,480,90, fill='yellow')
