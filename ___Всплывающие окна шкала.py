@@ -1,3 +1,5 @@
+# # # Всплывающие окна: Информация, Предупреждение, Ошибка
+
 # from tkinter import *
 # from tkinter import ttk
 # from tkinter.messagebox import showerror, showwarning, showinfo
@@ -30,6 +32,7 @@
 
 # root.mainloop()
 
+# # # Всплывающие окна: Подтвержение, отмена
 
 # from tkinter import *
 # from tkinter import ttk
@@ -48,6 +51,7 @@
 
 # root.mainloop()
 
+# # # Всплывающие окна: приостановлена, подтверждена, отменена
 
 # from tkinter import *
 # from tkinter import ttk
@@ -73,6 +77,7 @@
 
 # root.mainloop()
 
+# # # Всплывающие окна: OK, INFO, showinfo
 
 # from tkinter import *
 # from tkinter import ttk
@@ -92,6 +97,7 @@
 
 # root.mainloop()
 
+# # # Кнопка
 
 # from tkinter import *
 # from tkinter import ttk
@@ -104,6 +110,7 @@
 
 # root.mainloop()
 
+# # # Упорядочить по сетке
 
 # from tkinter import *
 # from tkinter import ttk
@@ -122,6 +129,7 @@
 #         btn.grid(row=r, column=c, ipadx=6, ipady=6, padx=[15,4], pady=4)
 # root.mainloop()
 
+# # # Упорядочить по сетке, кнопку растянуть на 2 строки
 
 # from tkinter import *
 # from tkinter import ttk
@@ -144,6 +152,7 @@
 # btn4.grid(row=1, column=1, ipadx=6,  ipady=6, padx=5, pady=5)
 # root.mainloop()
 
+# # # Упорядочить по сетке, кнопку растянуть на 2 столбца
 
 # from tkinter import *
 # from tkinter import ttk
@@ -166,6 +175,7 @@
 # btn3.grid(row=1, column=0, ipadx=6,  ipady=6, padx=5, pady=5)
 # root.mainloop()
 
+# # # Выровнять в таблице с масштабированием (заполнить весь полигон)
 
 # from tkinter import *
 # from tkinter import ttk
@@ -187,24 +197,25 @@
 
 # root.mainloop()
 
+# # # шкала
 
-from tkinter import *
+# from tkinter import *
 
-top = Tk()
-top.geometry('200x100')
+# top = Tk()
+# top.geometry('200x100')
 
-def select():
-    sel = 'Value = '+str(v.get())
-    label.config(text=sel)
+# def select():
+#     sel = 'Value = '+str(v.get())
+#     label.config(text=sel)
 
-v = DoubleVar()
-scale = Scale(top, variable=v, from_=1, to=50, orient=HORIZONTAL)
-scale.pack(anchor=CENTER)
+# v = DoubleVar()
+# scale = Scale(top, variable=v, from_=1, to=50, orient=HORIZONTAL)
+# scale.pack(anchor=CENTER)
 
-btn = Button(top, text='Value', command=select)
-btn.pack(anchor=CENTER)
+# btn = Button(top, text='Value', command=select)
+# btn.pack(anchor=CENTER)
 
-label = Label(top)
-label.pack()
+# label = Label(top)
+# label.pack()
 
-top.mainloop()
+# top.mainloop()

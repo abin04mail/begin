@@ -1,4 +1,6 @@
+# # # Метка, кнопка, поле для ввода
 
+# from tkinter import *
 # root = Tk()
 # root.title('Первое приложение на Tkinter')
 # root.geometry('700x500')
@@ -19,7 +21,6 @@
 # bt = Button(width=50, height=20, bg='cyan', activebackground='red', text="это кнопка!")
 # bt.pack()
 
-
 # bt1 = Button(width=10, height=20, bg='blue', activebackground='grey')
 # bt2 = Button(width=10, height=20, bg='orange', activebackground='black')
 # bt3 = Button(width=10, height=20, bg='yellow', activebackground='red')
@@ -29,12 +30,18 @@
 # bt3.pack(side=RIGHT)
 # bt4.pack(side=LEFT)
 
-
 # ent = Entry(root, width=20, bg='black', fg='white')
 # ent.pack()
 
+# root.mainloop()
 
-# преобразование текста
+# # # преобразование текста, сортировка
+
+# from tkinter import *
+# root = Tk()
+# root.title('Первое приложение на Tkinter')
+# root.geometry('700x500')
+
 # def str_to_sort_list():
 #     s = ent.get()
 #     s = s.split()
@@ -54,23 +61,32 @@
 
 # root.mainloop()
 
+# # # Canvas рисуем линию
 
 # from tkinter import *
 # root = Tk()
+
 # canvas = Canvas(root, width=500, height=500, bg='white')
 # canvas.pack()
 # canvas.create_line(10, 10, 150, 150) # координаты точек, x1 y1 x2 y2
+
 # root.mainloop()
 
+# # # Canvas рисуем квадрат
 
 # from tkinter import *
 # root = Tk()
+
 # canvas = Canvas(root, width=500, height=500, bg='white')
 # canvas.pack()
 # canvas.create_rectangle(5, 5, 100, 125, fill='yellow', activeoutline='red', dash=(30, 20, 10), width=5)
-# root.mainloop()
-# from tkinter import *
 
+# root.mainloop()
+
+# # # меняем цвет квадрата по нажатию кнопки
+
+# from tkinter import *
+# root = Tk()
 
 # def change():
 #     canvas.itemconfig(square, fill='blue')
@@ -80,15 +96,18 @@
 # side = 200
 # canvas_width, canvas_height = 300, 300
 # x, y = 20, 20
-# root = Tk()
 # canvas = Canvas(root, width=canvas_width, height=canvas_height, bg='white')
 # canvas.pack()
 # square = canvas.create_rectangle(x, y, x+side, y+side, fill='yellow')
 # Button(text='1244', command=change).pack()
+
 # root.mainloop()
 
+# # # домик, меняем цвета по нажатью кнопок
 
-# from tkinter import *
+#from tkinter import *
+#root = Tk()
+
 # colors = ['#7FFFD4', 'white', 'gray', 'brown', 'yellow',
 #           'blue', 'red', 'green', 'pink', 'magenta', 'black']
 
@@ -127,28 +146,30 @@
 # Button(text='Основание', command=change_square).pack()
 # Button(text='Крыша', command=change_roof).pack()
 # Button(text='Солнце', command=change_sun).pack()
+
 # root.mainloop()
 
+# # #
 
-from tkinter import *
-def change():
-    canvas.itemconfig(square, fill='black') 
-def change():   
-    canvas.itemconfig(sun, fill='black')
-def change():    
-    canvas.itemconfig(osnovanie, fill='black')
+# from tkinter import *
+# def change():
+#     canvas.itemconfig(square, fill='black') 
+# def change():   
+#     canvas.itemconfig(sun, fill='black')
+# def change():    
+#     canvas.itemconfig(osnovanie, fill='black')
 
-canvas_width, canvas_height = 300, 300
-x, y=20, 20
-root=Tk()
+# canvas_width, canvas_height = 300, 300
+# x, y=20, 20
+# root=Tk()
 
-canvas=Canvas(root, width=canvas_width, height=canvas_height, bg='white')
-canvas.pack() 
+# canvas=Canvas(root, width=canvas_width, height=canvas_height, bg='white')
+# canvas.pack() 
 
-square=canvas.create_rectangle(150, 150, 200, 200, fill="yellow") 
-sun=canvas.create_oval(250, 50, 300, 100, fill='yellow')
-osnovanie=canvas.create_polygon(150, 150, 175, 125, 200, 150, fill='grey')
+# square=canvas.create_rectangle(150, 150, 200, 200, fill="yellow") 
+# sun=canvas.create_oval(250, 50, 300, 100, fill='yellow')
+# osnovanie=canvas.create_polygon(150, 150, 175, 125, 200, 150, fill='grey')
 
-Button(text='Основание', command=change).pack() 
-Button(text='Крыша', command=change).pack() 
-Button(text='Солнце', command=change).pack() 
+# Button(text='Основание', command=change).pack() 
+# Button(text='Крыша', command=change).pack() 
+# Button(text='Солнце', command=change).pack() 

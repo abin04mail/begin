@@ -1,4 +1,7 @@
-from tkinter import *
+# from tkinter import *
+# import tkinter as tk
+# root = tk.Tk()
+
 # color = ['#7FFFD4','white', 'gray', 'brown','yelow', 'blue', 'red', 'green',
 #          'pink', 'magenta', 'black']
 
@@ -17,7 +20,7 @@ from tkinter import *
 # def change_sun():
 #     Canvas.itemconfig(sun, fill=colors[get_next(sun)])
 
-root = Tk()
+
 # root.title('Приложение')
 # root.geometry('700x500')
 # a1=Label(text='text')
@@ -76,18 +79,51 @@ root = Tk()
 # canv.create_polygon(15,15,190,190,110,50, fill='yellow',outline='black',
 #                     activeoutline='red', dash=(30,20,10),width=3)
 
-def change():
-    canvas.itemconfig(square, fill='blue')
-    print(canvas.itemcget(square, 'fill'))
+# def change():
+#     canvas.itemconfig(square, fill='blue')
+#     print(canvas.itemcget(square, 'fill'))
 
-side=200
-canvas_widtch, canvas_height=300, 300
-x, y=20, 20
-canvas = Canvas(root, width=canvas_widtch, height=canvas_height, bg='white')
-canvas.pack()
-square = canvas.create_rectangle(x,y,x+side,y+side,fill='Yellow')
-a=Button(text='1244', command=change)
-a.pack(side=BOTTOM)
+# side=200
+# canvas_widtch, canvas_height=300, 300
+# x, y=20, 20
+# canvas = Canvas(root, width=canvas_widtch, height=canvas_height, bg='white')
+# canvas.pack()
+# square = canvas.create_rectangle(x,y,x+side,y+side,fill='Yellow')
+# a=Button(text='1244', command=change)
+# a.pack(side=BOTTOM)
 
 
+# root.mainloop()
+
+# # # фрейм
+
+# import re
+# from tkinter import *
+# from tkinter import ttk
+ 
+# root = Tk()
+# root.title("METANIT.COM")
+# root.geometry("250x200")
+ 
+# frame = ttk.Frame(borderwidth=1, relief=SOLID, padding=[8, 10])
+# name_label = ttk.Label(frame, text="Введите имя")
+# name_label.pack(anchor=NW)
+ 
+# name_entry = ttk.Entry(frame)
+# name_entry.pack(anchor=NW)
+ 
+# frame.pack(anchor=NW, fill=X, padx=5, pady=5)
+ 
+# root.mainloop()
+
+from tkinter import *
+root=Tk()
+frame1=Frame(root,bg='green',bd=5)
+frame2=Frame(root,bg='red',bd=5)
+button1=Button(frame1,text=u'Первая кнопка')
+button2=Button(frame2,text=u'Вторая кнопка')
+frame1.pack()
+frame2.pack()
+button1.pack()
+button2.pack()
 root.mainloop()
