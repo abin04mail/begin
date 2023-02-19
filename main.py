@@ -1,6 +1,6 @@
 from roman import *
 
-t = ['IV', 'LVIII', 'MCMXCIV', 'XCIX', 'LXXX', 'LXIX']
+t = ['IV', 'LVIII', 'MCMXCIV', 'XCIX', 'LXXX', 'LXIX','DCCXCIX', 'MDCCCLXXVI']
 print(t)
 for i in t:
     print(i, '->', roman_to_int(i))
