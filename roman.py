@@ -40,17 +40,27 @@ def int_to_roman(stroka):
     """
         перевод из арабской с.с. в римскую
     """
-    if stroka==4:
-        return 'IV'
-    elif stroka==58:
-        return 'LVIII'
-    elif stroka==1994:
-        return 'MCMXCIV'
-    elif stroka==99:
-        return 'XCIX'
-    elif stroka==80:
-        return 'LXXX'
-    elif stroka==69:
-        return 'LXIX'
-    elif stroka==26:
-        return 'XXVI'
+    rim_itog=''
+    
+    rim=('I', 'V', 'X', 'L', 'C', 'D', 'M', 'W')
+    pos=len(stroka)-1
+    while pos>-1:
+        for min, max in ([0, 1], [0, 2], [2, 3], [2, 4], [4, 5], [4, 6], [6, 7]):
+            if pos>-1 and stroka[pos]<9:
+                rim_itog = rim_itog + 
+
+
+    # if stroka==4:
+    #     return 'IV'
+    # elif stroka==58:
+    #     return 'LVIII'
+    # elif stroka==1994:
+    #     return 'MCMXCIV'
+    # elif stroka==99:
+    #     return 'XCIX'
+    # elif stroka==80:
+    #     return 'LXXX'
+    # elif stroka==69:
+    #     return 'LXIX'
+    # elif stroka==26:
+    #     return 'XXVI'
