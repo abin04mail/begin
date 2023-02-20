@@ -36,18 +36,28 @@ def roman_to_int(stroka):
         
 
 
-def int_to_roman(stroka):
+def int_to_roman(number):
     """
         перевод из арабской с.с. в римскую
+        число не более 3000
     """
     rim_itog=''
-    
+    stroka = str(number)
     rim=('I', 'V', 'X', 'L', 'C', 'D', 'M', 'W')
-    pos=len(stroka)-1
-    while pos>-1:
-        for min, max in ([0, 1], [0, 2], [2, 3], [2, 4], [4, 5], [4, 6], [6, 7]):
-            if pos>-1 and stroka[pos]<9:
-                rim_itog = rim_itog + 
+    pos = len(stroka)
+    for min, mid, max, k in ([0, 1, 2, -1], [2, 3, 4, -2], [4, 5, 6, -3], [6, 7, 7, -4]):
+        arab={1: (min), 2: (min, min), 3: (min, min, min), 4: (min, mid), 5: (mid), 
+            6: (mid, min), 7: (mid, min, min), 8: (mid, min, min, min), 9: (min, max)}
+        if k >= -pos and stroka[k] != "0":
+            a = arab.get(int(stroka[k]))
+            b=(len(a) if type(a)==tuple else 1)
+            for i in range(b-1, -1, -1):
+                rim_itog = rim[(a[i] if type(a)==tuple else a)] + rim_itog
+
+    return rim_itog
+
+#print(int_to_roman(1568))
+
 
 
     # if stroka==4:
