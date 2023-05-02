@@ -32,4 +32,5 @@ def truncate(n, decimals = 0):                              # Функция у�
     multiplier = 10 ** decimals
     return int(n * multiplier) / multiplier
 
-test()
+#test()
+print(quadratic_solve(1,8,15))

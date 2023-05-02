@@ -1065,15 +1065,437 @@
 
 # Выполнить обработку элементов прямоугольной матрицы A, имеющей N строк и M столбцов.
 # Разделить элементы каждой строки на элемент этой строки с наибольшим значением.
-import numpy
-n=int(input('Количество строк: '))
-m=int(input('Количество столбцов: '))
-l=int(input('Строка L: '))
-a=numpy.zeros([n, m])
-max=[0]*n
-for i in range(n):
-    for j in range(m):
-        print('Элемент матрицы [',i,'][',j,']')
-        a[i, j]=input('Введите элемент: ')
-        if a[i, j]>max[i]:
-            max[i]=a[i, j]
+# import numpy
+# n=int(input('Количество строк: '))
+# m=int(input('Количество столбцов: '))
+# a=numpy.zeros([n, m])
+# max=[0]*n
+# for i in range(n):
+#     for j in range(m):
+#         print('Элемент матрицы [',i,'][',j,']')
+#         a[i, j]=input('Введите элемент: ')
+#         if a[i, j]>max[i]:
+#             max[i]=a[i, j]
+# for i in range(n):
+#     for j in range(m):
+#         print(a[i, j]/max[i],';', end='')
+#     print()
+
+# Выполнить обработку элементов прямоугольной матрицы A, имеющей N строк и M столбцов.
+# Разделить элементы каждого столбца матрицы на элемент этого столбца с наибольшим значением.
+# import numpy
+# n=int(input('Введите количество строк: '))
+# m=int(input('Введите количество столбцов: '))
+# a=numpy.zeros([n, m])
+# max=[0]*m
+# for i in range(n):
+#     for j in range(m):
+#         print('элемент матрицы [', i, '][', j,']')
+#         a[i, j]=input('введите элемент: ')
+#         if a[i, j]>max[j]:
+#             max[j]=a[i, j]
+# for i in range(n):
+#     for j in range(m):
+#         print(a[i, j]/max[j],';', end='')
+#     print()
+
+# Выполнить обработку элементов прямоугольной матрицы A, имеющей N строк и M столбцов.
+# Разделить элементы матрицы на элемент матрицы с наибольшим значением.
+# import numpy
+# n=int(input('Введите количество строк: '))
+# m=int(input('Введите количество столбцов: '))
+# a=numpy.zeros([n, m])
+# max=0
+# for i in range(n):
+#     for j in range(m):
+#         print('элемент матрицы [', i, '][', j,']')
+#         a[i, j]=input('введите элемент: ')
+#         if a[i, j]>max:
+#             max=a[i, j]
+# for i in range(n):
+#     for j in range(m):
+#         print(a[i, j]/max,';', end='')
+#     print()
+
+# Выполнить обработку элементов прямоугольной матрицы A, имеющей N строк и M столбцов.
+# Все элементы имеют целый тип. Дано целое число H. Определить, какие столбцы имеют хотя бы одно такое число, а какие не имеют.
+# import numpy
+# n=int(input('Введите количество строк: '))
+# m=int(input('Введите количество столбцов: '))
+# h=int(input('Введите искомое число: '))
+# a=numpy.zeros([n, m])
+# res=['True']*m
+# for i in range(n):
+#     for j in range(m):
+#         print('элемент матрицы [', i, '][', j,']')
+#         a[i, j]=input('введите элемент: ')
+#         res[j]*=(a[i, j]!=h)
+# for j in range(m):
+#     print('В столбце ', j, ' ', end='')
+#     print('нет искомого числа' if res[j] else 'есть искомое число')
+
+# Выполнить обработку элементов прямоугольной матрицы A, имеющей N строк и M столбцов.
+# Исключить из матрицы строку с номером L. Сомкнуть строки матрицы.
+# import numpy
+# n=int(input('Введите количество строк: '))
+# m=int(input('Введите количество столбцов: '))
+# l=int(input('Введите номер строки, которую необходимо исключить: '))
+# a=numpy.zeros([n, m])
+# for i in range(n):
+#     for j in range(m):
+#         print('элемент матрицы [', i, '][', j,']')
+#         a[i, j]=input('введите элемент: ')
+# for i in range(n-1):
+#     for j in range(m):
+#         if i >= l-1:
+#             a[i, j]=a[i+1, j]
+# for i in range(n-1):
+#     for j in range(m):
+#         print(a[i, j],';', end='')
+#     print()        
+
+# Выполнить обработку элементов прямоугольной матрицы A, имеющей N строк и M столбцов.
+# Добавить к матрице строку и вставить ее под номером L.
+# import numpy
+# n=int(input('Введите количество строк: '))
+# m=int(input('Введите количество столбцов: '))
+# l=int(input('Введите номер вставляемой строки: '))
+# a=numpy.zeros([n, m])
+# b=numpy.zeros([n+1,m])
+# for i in range(n):
+#     for j in range(m):
+#         print('элемент матрицы [', i, '][', j,']')
+#         a[i, j]=input('введите элемент: ')
+# for i in range(n+1):
+#     for j in range(m):
+#         if i < l-1:
+#             b[i, j]=a[i, j]
+#         elif i==l-1:
+#             print('элемент вставляемой строки [', i, '][', j,']')
+#             b[i, j]=input('введите элемент вставляемой строки: ')
+#         else:
+#             b[i, j]=a[i-1, j]
+# for i in range(n+1):
+#     for j in range(m):
+#         print(b[i, j],';', end='')
+#     print()        
+
+# Выполнить обработку элементов квадратной матрицы A, имеющей N строк и N столбцов.
+# Найти сумму элементов, стоящих на главной диагонали, и сумму элементов, стоящих на побочной диагонали
+# (элементы главной диагонали имеют индексы от [0,0] до [N,N], а элементы побочной диагонали – от [N,0] до [0,N])
+# import numpy
+# n=int(input('Введите количество строк и столбцов: '))
+# a=numpy.zeros([n, n])
+# g=0
+# p=0
+# for i in range(n):
+#     for j in range(n):
+#         print('элемент матрицы [', i, '][', j,']')
+#         a[i, j]=input('введите элемент: ')
+#         if i==j:
+#             g+=a[i, j]
+#         if i+j==n-1:
+#             p+=a[i, j]
+# print(g, p)
+
+# Выполнить обработку элементов квадратной матрицы A, имеющей N строк и N столбцов.
+# Определить сумму элементов, расположенных параллельно главной диагонали (ближайшие к главной).
+# Элементы главной диагонали имеют индексы от [0,0] до [N,N].
+# (элементы главной диагонали имеют индексы от [0,0] до [N,N], а элементы побочной диагонали – от [N,0] до [0,N])
+# import numpy
+# n=int(input('Введите количество строк и столбцов: '))
+# a=numpy.zeros([n, n])
+# up=0
+# down=0
+# for i in range(n):
+#     for j in range(n):
+#         print('элемент матрицы [', i, '][', j,']')
+#         a[i, j]=input('введите элемент: ')
+#         if i==j-1:
+#             up+=a[i, j]
+#         if i==j+1:
+#             down+=a[i, j]
+# print(up, down)
+
+# Выполнить обработку элементов квадратной матрицы A, имеющей N строк и N столбцов.
+# Определить произведение элементов, расположенных параллельно побочной диагонали (ближайшие к побочной).
+# Элементы побочной диагонали имеют индексы от [N,0] до [0,N]
+# import numpy
+# n=int(input('Введите количество строк и столбцов: '))
+# a=numpy.zeros([n, n])
+# up=1
+# down=1
+# for i in range(n):
+#     for j in range(n):
+#         print('элемент матрицы [', i, '][', j,']')
+#         a[i, j]=input('введите элемент: ')
+#         if i+j==n-2:
+#             up*=a[i, j]
+#         if i+j==n:
+#             down*=a[i, j]
+# print(up, down)
+
+# Выполнить обработку элементов квадратной матрицы A, имеющей N строк и N столбцов.
+# Каждой паре элементов, симметричных относительно главной диагонали (ближайшие к главной), присвоить значения,
+# равные полусумме этих симметричных значений (элементы главной диагонали имеют индексы от [0,0] до [N,N]).
+# import numpy
+# n=int(input('Введите количество строк и столбцов: '))
+# a=numpy.zeros([n, n])
+# for i in range(n):
+#     for j in range(n):
+#         print('элемент матрицы [', i, '][', j,']')
+#         a[i, j]=input('введите элемент: ')
+# for i in range(n):
+#     for j in range(n):
+#         a[i, j]=(a[i, j]+a[j, i])/2
+#         a[j, i]=a[i, j]
+# for i in range(n):
+#     for j in range(n):
+#         print(a[i, j],';', end='')
+#     print()  
+
+# Выполнить обработку элементов прямоугольной матрицы A, имеющей N строк и M столбцов.
+# Исходная матрица состоит из нулей и единиц.
+# Добавить к матрице еще один столбец, каждый элемент которого делает количество единиц в каждой строке чётным.
+# import numpy
+# n=int(input('Введите количество строк: '))
+# m=int(input('Введите количество столбцов: '))
+# a=numpy.zeros([n, m+1])
+# b =[0]*n
+# for i in range(n):
+#     for j in range(m):
+#         print('элемент матрицы [', i, '][', j,']')
+#         a[i, j]=input('введите элемент: ')
+#         b[i]+=a[i, j]
+# for i in range(n):
+#     a[i, m]=(0 if b[i]%2==0 else 1)
+# for i in range(n):
+#     for j in range(m+1):
+#         print(a[i, j],';', end='')
+#     print()  
+
+# Выполнить обработку элементов квадратной матрицы A, имеющей N строк и N столбцов.
+# Найти сумму элементов, расположенных выше главной диагонали, и произведение элементов,
+# расположенных выше побочной диагонали (элементы главной диагонали имеют индексы от [0,0] до [N,N], а элементы побочной диагонали — от [N,0] до [0,N]).
+# import numpy
+# n=int(input('Введите размер квадратной матрицы А: '))
+# a=numpy.zeros([n, n])
+# summs=0
+# multi=1
+# for i in range(n):
+#     for j in range(n):
+#         print('элемент матрицы [', i, '][', j,']')
+#         a[i, j]=input('введите элемент: ')
+#         if i<j:
+#             summs+=a[i, j]
+#         if j<n-i-1:
+#             multi*=a[i,j]
+# for i in range(n):
+#     for j in range(n):
+#         print(a[i, j],';', end='')
+#     print()
+# print(summs, multi)
+
+# Выполнить обработку элементов прямоугольной матрицы A, имеющей N строк и M столбцов.
+# Дан номер строки L и номер столбца K, при помощи которых исходная матрица разбивается на четыре части. Найти сумму элементов каждой части.
+# import numpy
+# import random
+# n=int(input('Введите размеры матрицы N: '))
+# m=int(input('Введите размеры матрицы M: '))
+# l=int(input('Введите номер строки L: '))
+# k=int(input('Введите номер столбца K: '))
+# a=numpy.zeros([n, m])
+# summ1,summ2,summ3,summ4=0,0,0,0
+# for i in range(n):
+#     for j in range(m):
+#         a[i, j]=random.randint(-10,10)
+#         if i<l and j<k:
+#             summ1+=a[i,j]
+#         if i<l and j>k:
+#             summ2+=a[i,j]
+#         if i>l and j<k:
+#             summ3+=a[i,j]
+#         if i>l and j>k:
+#             summ4+=a[i,j]
+# for i in range(n):
+#     for j in range(m):
+#         print(a[i, j],';', end='')
+#     print()
+# print(summ1,summ2,summ3,summ4)
+
+# Выполнить обработку элементов прямоугольной матрицы A, имеющей N строк и M столбцов.
+# Определить, сколько нулевых элементов содержится в каждом столбце и в каждой строке матрицы.
+# Результат оформить в виде матрицы из N + 1 строк и M + 1 столбцов.
+# import numpy
+# import random
+# n=int(input('Введите размеры матрицы N: '))
+# m=int(input('Введите размеры матрицы M: '))
+# a=numpy.zeros([n+1, m+1])
+# count_str = [0]*n
+# count_col = [0]*m
+# for i in range(n):
+#     for j in range(m):
+#         a[i, j]=random.randint(-10,10)
+#         if a[i,j]==0:
+#             count_col[j]+=1
+#             count_str[i]+=1
+# for i in range(n):
+#     a[i,m]=count_str[i]
+# for i in range(m):
+#     a[n,j]=count_col[j]
+# for i in range(n+1):
+#     for j in range(m+1):
+#         print(a[i, j],';', end='')
+#     print()
+# print(count_col, count_str)
+
+# Выполнить обработку элементов прямоугольной матрицы A, имеющей N строк и M столбцов.
+# Дан номер строки L и номер столбца K, при помощи которых исходная матрица разбивается на четыре части.
+# Найти среднее арифметическое элементов каждой части.
+# import numpy
+# import random
+# n=int(input('Введите размеры матрицы N: '))
+# m=int(input('Введите размеры матрицы M: '))
+# l=int(input('Введите номер строки L: '))
+# k=int(input('Введите номер столбца K: '))
+# a=numpy.zeros([n, m])
+# summ1,summ2,summ3,summ4=0,0,0,0
+# count1, count2, count3, count4=0,0,0,0
+# for i in range(n):
+#     for j in range(m):
+#         a[i, j]=random.randint(-10,10)
+#         if i<l and j<k:
+#             summ1+=a[i,j]
+#             count1+=1
+#         if i<l and j>k:
+#             summ2+=a[i,j]
+#             count2+=1
+#         if i>l and j<k:
+#             summ3+=a[i,j]
+#             count3+=1
+#         if i>l and j>k:
+#             summ4+=a[i,j]
+#             count4+=1
+# for i in range(n):
+#     for j in range(m):
+#         print(a[i, j],';', end='')
+#     print()
+# print(summ1/count1,summ2/count2,summ3/count3,summ4/count4)
+
+# Выполнить обработку элементов прямоугольной матрицы A, имеющей N строк и M столбцов.
+# Все элементы имеют целый тип. Дано целое число H.
+# Определить, какие строки имеют хотя бы одно такое число, а какие не имеют.
+# import numpy
+# import random
+# n=int(input('Введите размеры матрицы N: '))
+# m=int(input('Введите размеры матрицы M: '))
+# h=int(input('Введте число H: '))
+# a=numpy.zeros([n, m])
+# count_str = [0]*n
+# for i in range(n):
+#     for j in range(m):
+#         a[i, j]=random.randint(-10,10)
+#         if a[i,j]==h:
+#             count_str[i]+=1
+# for i in range(n):
+#     for j in range(m):
+#         print(a[i, j],';', end='')
+#     print()
+# print(f'Количество чисел H по строкам: {count_str}')
+
+# Выполнить обработку элементов прямоугольной матрицы A, имеющей N строк и M столбцов.
+# Исключить из матрицы столбец с номером K. Сомкнуть столбцы матрицы.
+# import numpy
+# import random
+# n=int(input('Введите размеры матрицы N: '))
+# m=int(input('Введите размеры матрицы M: '))
+# k=int(input('Введте номер столбца, который необходимо удалить: '))
+# a=numpy.zeros([n, m])
+# for i in range(n):
+#     for j in range(m):
+#         a[i, j]=random.randint(-10,10)                 
+# for i in range(n):
+#     for j in range(m):
+#         print(a[i, j],';', end='')
+#     print()
+# for i in range(n):
+#     for j in range(k-1,m-1):
+#         a[i,j]=a[i,j+1]
+# for i in range(n):
+#     for j in range(m-1):
+#         print(a[i, j],';', end='')
+#     print()
+
+# Выполнить обработку элементов прямоугольной матрицы A, имеющей N строк и M столбцов.
+# Добавить к матрице столбец чисел и вставить его под номером K.
+# import numpy
+# import random
+# n=int(input('Введите размеры матрицы N: '))
+# m=int(input('Введите размеры матрицы M: '))
+# k=int(input('Введте номер столбца, который необходимо вставить: '))
+# a=numpy.zeros([n, m+1])
+# for i in range(n):
+#     for j in range(m):
+#         a[i, j]=random.randint(-10,10)
+# for i in range(n):
+#     for j in range(m):
+#         print(a[i, j],';', end='')
+#     print()
+# print()
+# for i in range(n):
+#     for j in range(m,k,-1):
+#             a[i, j]=a[i,j-1]
+# for i in range(n):
+#      a[i,k]=random.randint(-10,10)
+# for i in range(n):
+#     for j in range(m+1):
+#         print(a[i, j],';', end='')
+#     print()
+
+# Выполнить обработку элементов прямоугольной матрицы A, имеющей N строк и M столбцов.
+# Добавить к элементам каждого столбца такой новый элемент, чтобы сумма положительных элементов стала бы равна модулю суммы отрицательных элементов.
+# Результат оформить в виде матрицы из N + 1 строк и M столбцов.
+# import numpy
+# import random
+# n=int(input('Введите размеры матрицы N: '))
+# m=int(input('Введите размеры матрицы M: '))
+# a=numpy.zeros([n+1, m])
+# summ_pos=[0]*m
+# summ_neg=[0]*m
+# for i in range(n):
+#     for j in range(m):
+#         a[i, j]=random.randint(-10,10)
+#         if a[i,j]<0:
+#             summ_neg[j]+=a[i,j]
+#         else:
+#             summ_pos[j]+=a[i,j]
+# for j in range(m):
+#     a[n,j]=-(summ_neg[j]+summ_pos[j])
+# for i in range(n+1):
+#     for j in range(m):
+#         print(a[i, j],';', end='')
+#     print()
+
+# Выполнить обработку элементов прямоугольной матрицы A, имеющей N строк и M столбцов.
+# Добавить к элементам каждой строки такой новый элемент, чтобы сумма положительных элементов стала бы равна модулю суммы отрицательных элементов.
+# Результат оформить в виде матрицы из N строк и M + 1 столбцов
+# import numpy
+# import random
+# n=int(input('Введите размеры матрицы N: '))
+# m=int(input('Введите размеры матрицы M: '))
+# a=numpy.zeros([n, m+1])
+# summ_pos=[0]*n
+# summ_neg=[0]*n
+# for i in range(n):
+#     for j in range(m):
+#         a[i, j]=random.randint(-10,10)
+#         if a[i,j]<0:
+#             summ_neg[i]+=a[i,j]
+#         else:
+#             summ_pos[i]+=a[i,j]
+# for i in range(n):
+#     a[i,m]=-(summ_neg[i]+summ_pos[i])
+# for i in range(n):
+#     for j in range(m+1):
+#         print(a[i, j],';', end='')
+#     print()
