@@ -1,0 +1,47 @@
+<MainWidget>:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 20
+    name_input: name
+    name_input1: name1
+    hello_label: hello
+
+    Image:
+        source: 'photo_1.jpg'
+
+    Image:
+        source: 'photo_2.jpeg'
+
+    TextInput:
+        id: name
+        multiline: False
+        size_hint: (.5, None)
+        pos_hint:{"center_x":0.5, "top":1}
+        height: 50
+        font_size: 30
+        foreground_color: [1,0,.5,1]
+
+    TextInput:
+        id: name1
+        multiline: False
+        size_hint: (.5, None)
+        pos_hint:{"center_x":0.5, "top":1}
+        height: 50
+        font_size: 30
+
+
+    Label:
+        id: hello
+        font_size: 30
+        text: 'Напишите как вас зовут'
+
+    Label:
+        font_size: 100
+        text: 'Метка'
+
+    Button:
+        font_size: 30
+        text: 'Поздороваться'
+        size_hint: (.5, None)
+        pos_hint:{"center_x":0.5, "top":1}
+        on_press: root.say_hello()

@@ -1,0 +1,21 @@
+<MainWidget>:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 20
+    Label:
+        markup: True
+        text: '[color=000000]Привет,[/color]'
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    Label:
+        text: 'мир'
+        canvas.before:
+            Color:
+                rgba: 1, .5, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size                
